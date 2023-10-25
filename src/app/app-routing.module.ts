@@ -3,12 +3,22 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutFrontComponent } from './front/layout-front/layout-front.component';
 import { LayoutComponent } from './back/layout/layout.component';
 import { BrowserModule } from '@angular/platform-browser';
+<<<<<<< Updated upstream
 import { LogInComponent } from './components/log-in/log-in.component';
 import { RegisterComponent } from './components/register/register.component';
+=======
+import { ForumComponent } from './back/forum/forum.component';
+
+>>>>>>> Stashed changes
 const routes: Routes = [
   {
     path: 'back',
     component: LayoutComponent,
+  },
+  {
+    path: 'back/forum',
+    component: ForumComponent,
+    // Add more routes for the "front" section as needed
   },
   {
     path: 'front',
