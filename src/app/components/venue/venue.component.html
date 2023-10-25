@@ -1,0 +1,34 @@
+<div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+  <table class="table table-report -mt-2">
+    <thead>
+      <tr>
+        <th class="whitespace-nowrap">ID</th>
+        <th class="whitespace-nowrap">Name</th>
+        <th class="whitespace-nowrap">Address</th>
+        <th class="whitespace-nowrap">Capacity</th>
+        <th class="whitespace-nowrap">Description</th>
+        <th class="whitespace-nowrap">Website</th>
+        <th class="whitespace-nowrap">Phone</th>
+        <th class="whitespace-nowrap">Email</th>
+        <th class="whitespace-nowrap">Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="intro-x" *ngFor="let venue of venues">
+
+        <td>{{ venue.id }}</td>
+        <td>{{ venue.name }}</td>
+        <td>{{ venue.address }}</td>
+        <td>{{ venue.capacity }}</td>
+        <td>{{ venue.description }}</td>
+        <td>{{ venue.website }}</td>
+        <td>{{ venue.phone }}</td>
+        <td>{{ venue.email }}</td>
+        <td>
+          <!-- Render your image here, for example: -->
+          <img *ngIf="venue.image" [src]="venue.image" alt="Venue Image" width="50" height="50">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
