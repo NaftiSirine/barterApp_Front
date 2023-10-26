@@ -7,6 +7,7 @@ import { BarterRequestComponent } from './components/barter-request/barter-reque
 import { EventComponent } from './components/event/event.component';
 import { VenueComponent } from './components/venue/venue.component';
 import { ResponseComponent } from './components/response/response.component';
+import { FormComponent } from './components/form/form/form.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,23 @@ const routes: Routes = [
         path: 'responses',
         component: ResponseComponent,
       },
+      {
+        path: 'form',
+        component: FormComponent,
+      },
+      {
+        path: 'form/create', // Create a new form
+        component: FormComponent,
+      },
+      {
+        path: 'form/edit/:id', // Edit an existing form, :id is a parameter
+        component: FormComponent,
+      },
+      {
+        path: 'form/:id', // View form details by ID, :id is a parameter
+        component: FormComponent,
+      },
+      
     ],
   },
   {
