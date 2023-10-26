@@ -14,6 +14,8 @@ import { AddEventComponent } from './components/add-event/add-event.component';
 import { EditEventComponent } from './components/edit-event/edit-event.component';
 import { AddVenueComponent } from './components/add-venue/add-venue.component';
 import { EditVenueComponent } from './components/edit-venue/edit-venue.component';
+import { AddResponseComponent } from './components/add-response/add-response.component';
+import { EditResponseComponent } from './components/edit-response/edit-response.component';
 
 const routes: Routes = [
   {
@@ -54,7 +56,15 @@ const routes: Routes = [
       },
       {
         path: 'responses',
-        component: ResponseComponent,
+        component: ResponseComponent ,
+      },
+      {
+        path: 'addresponse',
+        component: AddResponseComponent ,
+      },
+      {
+        path: 'editresponse/:id',
+        component: EditResponseComponent,
       },
       {
         path: 'form',
