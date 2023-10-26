@@ -1,4 +1,6 @@
 <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
+  <a routerLink="/back/addvenue" class="button bg-red text-white">Add Venue</a>
+
   <table class="table table-report -mt-2">
     <thead>
       <tr>
@@ -11,6 +13,7 @@
         <th class="whitespace-nowrap">Phone</th>
         <th class="whitespace-nowrap">Email</th>
         <th class="whitespace-nowrap">Image</th>
+        <th class="whitespace-nowrap">Actions</th>
       </tr>
     </thead>
     <tbody>
@@ -27,6 +30,16 @@
         <td>
           <!-- Render your image here, for example: -->
           <img *ngIf="venue.image" [src]="venue.image" alt="Venue Image" width="50" height="50">
+        </td>
+        <td class="table-report__action w-56">
+          <div class="flex justify-center items-center">
+            <a  (click)="editVenue(venue.id)" class="flex items-center mr-3">
+              <i data-lucide="pencil" class="w-4 h-4 mr-1"></i> Edit
+            </a>
+            <a href="javascript:;" class="flex items-center text-danger" (click)="deleteVenue(venue.id)">
+              <i data-lucide="trash-2" class="w-4 h-4 mr-1"></i> Delete
+            </a>
+          </div>
         </td>
       </tr>
     </tbody>

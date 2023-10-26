@@ -12,6 +12,8 @@ import { AddBarterComponent } from './components/add-barter/add-barter.component
 import { EditBarterComponent } from './components/edit-barter/edit-barter.component';
 import { AddEventComponent } from './components/add-event/add-event.component';
 import { EditEventComponent } from './components/edit-event/edit-event.component';
+import { AddVenueComponent } from './components/add-venue/add-venue.component';
+import { EditVenueComponent } from './components/edit-venue/edit-venue.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
       {
         path: 'venues',
         component: VenueComponent,
+      },
+      {
+        path: 'addvenue',
+        component: AddVenueComponent,
+      },
+      {
+        path: 'editvenue/:id',
+        component: EditVenueComponent,
       },
       {
         path: 'responses',
