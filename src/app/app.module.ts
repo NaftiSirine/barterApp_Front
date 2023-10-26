@@ -29,6 +29,10 @@ import { AddVenueComponent } from './components/add-venue/add-venue.component';
 import { AddEventComponent } from './components/add-event/add-event.component';
 import { AddCategoryComponent } from './components/add-category/add-category.component';
 import { CategoryComponent } from './components/category/category.component';
+import { AddannonceComponent } from './components/addannonce/addannonce.component';
+import { AnnonceComponent } from './components/annonce/annonce.component';
+import { EditAnnonceComponent } from './components/edit-annonce/edit-annonce.component';
+import { EditcategoryComponent } from './components/editcategory/editcategory.component';
 
 
 @NgModule({
@@ -56,7 +60,10 @@ import { CategoryComponent } from './components/category/category.component';
     AddEventComponent,
     AddCategoryComponent,
     CategoryComponent,
-
+    AddannonceComponent,
+    AnnonceComponent,
+    EditAnnonceComponent,
+    EditcategoryComponent
       ],
   imports: [
     BrowserModule,CommonModule,

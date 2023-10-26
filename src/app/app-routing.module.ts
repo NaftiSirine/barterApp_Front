@@ -16,6 +16,12 @@ import { AddVenueComponent } from './components/add-venue/add-venue.component';
 import { EditVenueComponent } from './components/edit-venue/edit-venue.component';
 import { AddResponseComponent } from './components/add-response/add-response.component';
 import { EditResponseComponent } from './components/edit-response/edit-response.component';
+import { AnnonceComponent } from './components/annonce/annonce.component';
+import { CategoryComponent } from './components/category/category.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { AddannonceComponent } from './components/addannonce/addannonce.component';
+import { EditAnnonceComponent } from './components/edit-annonce/edit-annonce.component';
+import { EditcategoryComponent } from './components/editcategory/editcategory.component';
 
 const routes: Routes = [
   {
@@ -25,6 +31,30 @@ const routes: Routes = [
       {
         path: 'barterRequests',
         component: BarterRequestComponent,
+      },
+      {
+        path: 'annonces',
+        component: AnnonceComponent,
+      },
+      {
+        path: 'editAnnonce/:id',
+        component: EditAnnonceComponent,
+      },
+      {
+        path: 'addannonce',
+        component: AddannonceComponent,
+      },
+      {
+        path: 'categories',
+        component: CategoryComponent,
+      },
+      {
+        path: 'editCategory/:id',
+        component: EditcategoryComponent,
+      },
+      {
+        path: 'addcategory',
+        component: AddCategoryComponent,
       },
       {
         path: 'barteradd',
