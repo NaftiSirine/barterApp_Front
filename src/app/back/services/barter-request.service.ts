@@ -12,4 +12,21 @@ export class BarterRequestService {
   getAllBarterRequests(): Observable<any> {
     return this.http.get(this.apiUrl);
   }
+  createBarterRequest(barterRequest: any): Observable<any> {
+    return this.http.post(this.apiUrl, barterRequest);
+  }
+  deleteBarterRequest(requestId: number): Observable<any> {
+    const url = `${this.apiUrl}/${requestId}`;
+    return this.http.delete(url);
+  }
+  getBarterRequest(requestId: number): Observable<any> {
+    const url = `${this.apiUrl}/${requestId}`;
+    return this.http.get(url);
+  }
+
+  // Update a barter request by its ID
+  updateBarterRequest(requestId: number, requestData: any): Observable<any> {
+    const url = `${this.apiUrl}/${requestId}`;
+    return this.http.put(url, requestData);
+  }
 }

@@ -18,7 +18,9 @@ import { AddFormComponent } from './components/form/add/add-form/add-form.compon
 import { EditFormComponent } from './components/form/edit/edit-form/edit-form.component';
 import { ViewFormComponent } from './components/form/view/view-form/view-form.component';
 import { DeleteFormComponent } from './components/form/delete/delete-form/delete-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddBarterComponent } from './components/add-barter/add-barter.component';
+import { EditBarterComponent } from './components/edit-barter/edit-barter.component';
 
 
 @NgModule({
@@ -31,15 +33,19 @@ import { FormsModule } from '@angular/forms';
     VenueComponent,
     ResponseComponent,
     FormComponent,
+
     AddFormComponent,
     EditFormComponent,
     DeleteFormComponent,
     ViewFormComponent,
+    AddBarterComponent,
+    EditBarterComponent,
       ],
   imports: [
     BrowserModule,CommonModule,
     AppRoutingModule  ,
     FormsModule,
+    ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
     HttpClientModule],
