@@ -5,6 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './back/header/header.component';
 import { LayoutComponent } from './back/layout/layout.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LogInComponent } from './components/log-in/log-in.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ForumComponent } from './components/forum/forum.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BarterRequestComponent } from './components/barter-request/barter-request.component';
@@ -36,6 +41,11 @@ import { CategoryComponent } from './components/category/category.component';
     AppComponent,
     HeaderComponent,
     LayoutComponent,
+    RegisterComponent,
+    LogInComponent,
+    ForumComponent
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule,ReactiveFormsModule,FormsModule],
     BarterRequestComponent,
     EventComponent,
     VenueComponent,
@@ -67,6 +77,6 @@ import { CategoryComponent } from './components/category/category.component';
     MatButtonModule,
     HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
