@@ -11,5 +11,5 @@
     <div class="error" *ngIf="barterForm.get('message')?.hasError('required') && barterForm.get('message')?.touched">Message is required.</div>
   </div>
 
-  <button type="submit" class="submit-button" [disabled]="barterForm.invalid">Submit</button>
+  <button type="submit" class="submit-button">Submit</button>
 </form>

@@ -12,7 +12,7 @@ export class VenueComponent {
   constructor(private VenueService: VenueService) { }
 
   ngOnInit(): void {
-    this.VenueService.getAll().subscribe((data: any) => {
+    this.VenueService.getAllVenues().subscribe((data: any) => {
       this.venues = data;
       console.log(data)
     });

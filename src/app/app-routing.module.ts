@@ -10,6 +10,8 @@ import { ResponseComponent } from './components/response/response.component';
 import { FormComponent } from './components/form/form/form.component';
 import { AddBarterComponent } from './components/add-barter/add-barter.component';
 import { EditBarterComponent } from './components/edit-barter/edit-barter.component';
+import { AddEventComponent } from './components/add-event/add-event.component';
+import { EditEventComponent } from './components/edit-event/edit-event.component';
 
 const routes: Routes = [
   {
@@ -30,6 +32,12 @@ const routes: Routes = [
         path: 'events',
         component: EventComponent,
       },
+      {
+        path: 'eventadd',
+        component: AddEventComponent,
+      },
+      { path: 'editevent/:id', component: EditEventComponent },
+
       {
         path: 'venues',
         component: VenueComponent,

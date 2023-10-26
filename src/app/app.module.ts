@@ -21,6 +21,14 @@ import { DeleteFormComponent } from './components/form/delete/delete-form/delete
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddBarterComponent } from './components/add-barter/add-barter.component';
 import { EditBarterComponent } from './components/edit-barter/edit-barter.component';
+import { AddResponseComponent } from './components/add-response/add-response.component';
+import { EditResponseComponent } from './components/edit-response/edit-response.component';
+import { EditVenueComponent } from './components/edit-venue/edit-venue.component';
+import { EditEventComponent } from './components/edit-event/edit-event.component';
+import { AddVenueComponent } from './components/add-venue/add-venue.component';
+import { AddEventComponent } from './components/add-event/add-event.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
+import { CategoryComponent } from './components/category/category.component';
 
 
 @NgModule({
@@ -40,6 +48,15 @@ import { EditBarterComponent } from './components/edit-barter/edit-barter.compon
     ViewFormComponent,
     AddBarterComponent,
     EditBarterComponent,
+    AddResponseComponent,
+    EditResponseComponent,
+    EditVenueComponent,
+    EditEventComponent,
+    AddVenueComponent,
+    AddEventComponent,
+    AddCategoryComponent,
+    CategoryComponent,
+
       ],
   imports: [
     BrowserModule,CommonModule,

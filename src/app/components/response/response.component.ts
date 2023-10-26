@@ -12,7 +12,7 @@ export class ResponseComponent {
   constructor(private responseService: ResponseService) { }
 
   ngOnInit(): void {
-    this.responseService.getAll().subscribe((data: any) => {
+    this.responseService.getAllResponses().subscribe((data: any) => {
       this.responses = data;
       console.log(data)
     });
