@@ -13,7 +13,7 @@ import { ReviewService } from 'src/app/services/review.service';
 export class ReviewsUpdateComponent implements OnInit {
   reviewId!: number;
   review!: Review;
-  updatedReview: Review = new Review();
+  updatedReview: Review = new Review(1, '', 0, '');
 
   constructor(
     private route: ActivatedRoute,
@@ -42,7 +42,7 @@ export class ReviewsUpdateComponent implements OnInit {
   updateReview(): void {
     this.reviewService.updateReview(this.reviewId, this.updatedReview).subscribe(
       (data: any) => {
-        this.router.navigate(['/reviews']); // Redirect to the reviews list after update
+        this.router.navigate(['/back/reviews']); // Redirect to the reviews list after update
       },
       (error: any) => {
         console.error('Error updating review:', error);

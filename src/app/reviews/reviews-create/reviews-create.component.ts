@@ -11,7 +11,7 @@ import { ReviewService } from 'src/app/services/review.service';
   styleUrls: ['./reviews-create.component.css']
 })
 export class ReviewsCreateComponent {
-  newReview: Review = new Review();
+  newReview: Review = new Review(1  , '', 0, '');
 
   constructor(
     private reviewService: ReviewService,

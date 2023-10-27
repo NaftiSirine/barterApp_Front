@@ -1,3 +1,5 @@
+// product-list.component.ts
+
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/Models/product';
 import { ProductService } from 'src/app/services/product.service';
@@ -27,5 +29,12 @@ export class ProductListComponent implements OnInit {
     );
   }
 
-  // You can add more methods or functionality as needed
+  deleteProduct(productId: number): void {
+    // Implement the delete logic here using this.productId
+    console.log(`Deleting product with ID: ${productId}`);
+    // Call your deleteProduct service method here
+
+    // After deleting, reload the list of products or perform any other necessary actions
+    // Example: this.loadProducts();
+  }
 }

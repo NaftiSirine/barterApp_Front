@@ -28,4 +28,21 @@ export class ReviewsListComponent implements OnInit {
       }
     );
   }
+
+
+
+
+  deleteReview(reviewId: number|undefined): void {
+    if (confirm('Are you sure you want to delete this review?')) {
+      this.reviewService.deleteReview(reviewId).subscribe(
+        () => {
+          // Reload reviews after deletion
+          this.loadReviews();
+        },
+        (error: any) => {
+          console.error('Error deleting review:', error);
+        }
+      );
+    }
+  }
 }

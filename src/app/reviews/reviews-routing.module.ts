@@ -9,7 +9,7 @@ import { ReviewsDetailsComponent } from './reviews-details/reviews-details.compo
 const routes: Routes = [
   { path: '', component: ReviewsListComponent },
   { path: 'details/:id', component: ReviewsDetailsComponent },
-  { path: 'update/:id', component: ReviewsUpdateComponent },
+  { path: ':id/update', component: ReviewsUpdateComponent },
   { path: 'create', component: ReviewsCreateComponent},
 
 ];

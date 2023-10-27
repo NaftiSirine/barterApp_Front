@@ -15,7 +15,7 @@
           <th>Description</th>
           <th>Address</th>
           <th>Photo</th>
-          <th>Action</th> <!-- Added Action column for the Edit button -->
+          <th>Action</th> <!-- Added Action column for the Edit and Delete buttons -->
         </tr>
       </thead>
       <tbody>
@@ -23,7 +23,7 @@
           <td>{{ product.id }}</td>
           <td>
             <!-- Link to the product details page -->
-            <a [routerLink]="['/products', product.id]">{{ product.productName }}</a>
+            <a [routerLink]="['/back/products', product.id]">{{ product.productName }}</a>
           </td>
           <td>{{ product.weight }}</td>
           <td>{{ product.category }}</td>
@@ -34,9 +34,13 @@
           <td>{{ product.photo }}</td>
           <td>
             <!-- Edit button with routerLink to the update page -->
-            <a [routerLink]="['/products', product.id, 'update']">Edit</a>
+            <a [routerLink]="['/back/products', product.id, 'update']">Edit</a>
+            
+            <!-- Delete button with click event to trigger the deleteProduct method -->
+            <button (click)="deleteProduct(product.id)">Delete</button>
           </td>
         </tr>
       </tbody>
     </table>
   </div>
+  

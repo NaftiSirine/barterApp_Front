@@ -11,7 +11,7 @@
           <th>Comments</th>
           <th>Star Rating</th>
           <th>Status</th>
-          <th>Action</th> <!-- You can add more columns as needed -->
+          <th>Action</th>
         </tr>
       </thead>
       <tbody>
@@ -23,6 +23,8 @@
           <td>{{ review.status }}</td>
           <td>
             <!-- Add action buttons or links as needed -->
+            <a [routerLink]="['/back/reviews', review.id, 'update']">Edit</a>
+            <button (click)="deleteReview(review.id)">Delete</button>
           </td>
         </tr>
       </tbody>

@@ -1,8 +1,7 @@
-    <body class="py-5 md:py-0"  style="background-color: #E2E8F0;">
-      <app-header></app-header>
-      <div class="flex overflow-hidden">
-        <!-- BEGIN: Side Menu -->
-        <!-- BEGIN: Side Menu -->
+   
+   <body class="py-5 md:py-0"  style="background-color: #E2E8F0;">
+        <div class="flex justify-center items-center overflow-hidden h-screen">
+ 
         <nav class="side-nav">
           <ul>
               <li>
@@ -66,15 +65,24 @@
                     <div class="side-menu__title"  routerLink="/back/form"> Forms </div>
                 </a>
             </li>
+            <li>
+                <a  class="side-menu">
+                    <div class="side-menu__icon"> <i data-lucide="hard-drive"></i> </div>
+                    <div class="side-menu__title"  routerLink="/back/products"> Products </div>
+                </a>
+            </li>
+            <li>
+                <a  class="side-menu">
+                    <div class="side-menu__icon"> <i data-lucide="hard-drive"></i> </div>
+                    <div class="side-menu__title"  routerLink="/back/reviews"> Reviews </div>
+                </a>
+            </li>
 
           </ul>
       </nav>
       <div class="content">
      <router-outlet></router-outlet>
     </div>
-      <!-- END: Side Menu -->
-        <!-- END: Side Menu -->
-        <!-- BEGIN: Content -->
-        <!-- END: Content -->
+    
     </div>
     </body>
