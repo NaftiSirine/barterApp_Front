@@ -1,0 +1,15 @@
+<!-- reviews-details.component.html -->
+
+<div *ngIf="review">
+  <p>{{ review.comments }}</p>
+  <p>Rating: {{ review.starRating }}</p>
+  <!-- Add more details as needed -->
+
+  <!-- You can add buttons, forms, or any other UI elements here -->
+
+  <!-- For example, a button to go back to the list of reviews -->
+  <button routerLink="/reviews">Back to Reviews</button>
+</div>
+
+<!-- Display a loading message while the review details are being fetched -->
+<div *ngIf="!review">Loading review details...</div>

@@ -3,25 +3,26 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutFrontComponent } from './front/layout-front/layout-front.component';
 import { LayoutComponent } from './back/layout/layout.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { AnnonceComponent } from './components/annonce/annonce.component';
 import { BarterRequestComponent } from './components/barter-request/barter-request.component';
-import { EventComponent } from './components/event/event.component';
-import { VenueComponent } from './components/venue/venue.component';
-import { ResponseComponent } from './components/response/response.component';
-import { FormComponent } from './components/form/form/form.component';
+import { EditAnnonceComponent } from './components/edit-annonce/edit-annonce.component';
+import { AddannonceComponent } from './components/addannonce/addannonce.component';
+import { CategoryComponent } from './components/category/category.component';
+import { EditcategoryComponent } from './components/editcategory/editcategory.component';
+import { AddCategoryComponent } from './components/add-category/add-category.component';
 import { AddBarterComponent } from './components/add-barter/add-barter.component';
 import { EditBarterComponent } from './components/edit-barter/edit-barter.component';
+import { EventComponent } from './components/event/event.component';
 import { AddEventComponent } from './components/add-event/add-event.component';
 import { EditEventComponent } from './components/edit-event/edit-event.component';
+import { VenueComponent } from './components/venue/venue.component';
 import { AddVenueComponent } from './components/add-venue/add-venue.component';
 import { EditVenueComponent } from './components/edit-venue/edit-venue.component';
+import { ResponseComponent } from './components/response/response.component';
 import { AddResponseComponent } from './components/add-response/add-response.component';
 import { EditResponseComponent } from './components/edit-response/edit-response.component';
-import { AnnonceComponent } from './components/annonce/annonce.component';
-import { CategoryComponent } from './components/category/category.component';
-import { AddCategoryComponent } from './components/add-category/add-category.component';
-import { AddannonceComponent } from './components/addannonce/addannonce.component';
-import { EditAnnonceComponent } from './components/edit-annonce/edit-annonce.component';
-import { EditcategoryComponent } from './components/editcategory/editcategory.component';
+import { FormComponent } from './components/form/form/form.component';
+
 
 const routes: Routes = [
   {
@@ -120,14 +121,22 @@ const routes: Routes = [
     component: LayoutFrontComponent,
 
   },
-
+  
+  {
+    path: 'products',
+    loadChildren: () =>
+      import('./products/products.module').then((m) => m.ProductsModule),
+  },
+  {
+    path: 'reviews',
+    loadChildren: () =>
+      import('./reviews/reviews.module').then((m) => m.ReviewsModule),
+  },
 ];
 
 @NgModule({
-  imports: [BrowserModule,RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  declarations: [
-    LayoutFrontComponent
-  ],
+  declarations: [LayoutFrontComponent],
 })
 export class AppRoutingModule {}
