@@ -5,12 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './back/header/header.component';
 import { LayoutComponent } from './back/layout/layout.component';
-import { RegisterComponent } from './components/register/register.component';
-import { LogInComponent } from './components/log-in/log-in.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ForumComponent } from './components/forum/forum.component';
-import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { BarterRequestComponent } from './components/barter-request/barter-request.component';
 import { EventComponent } from './components/event/event.component';
@@ -23,7 +18,6 @@ import { AddFormComponent } from './components/form/add/add-form/add-form.compon
 import { EditFormComponent } from './components/form/edit/edit-form/edit-form.component';
 import { ViewFormComponent } from './components/form/view/view-form/view-form.component';
 import { DeleteFormComponent } from './components/form/delete/delete-form/delete-form.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddBarterComponent } from './components/add-barter/add-barter.component';
 import { EditBarterComponent } from './components/edit-barter/edit-barter.component';
 import { AddResponseComponent } from './components/add-response/add-response.component';
@@ -38,18 +32,20 @@ import { AddannonceComponent } from './components/addannonce/addannonce.componen
 import { AnnonceComponent } from './components/annonce/annonce.component';
 import { EditAnnonceComponent } from './components/edit-annonce/edit-annonce.component';
 import { EditcategoryComponent } from './components/editcategory/editcategory.component';
-
+import { AnnonceService } from './back/services/annonce.service';
+import { BarterRequestService } from './back/services/barter-request.service';
+import { CategoryService } from './back/services/category.service';
+import { VenueService } from './back/services/venue.service';
+import { EventService } from './back/services/event.service';
+import { ResponseService } from './back/services/response.service';
+import { FormService } from './back/services/form.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     LayoutComponent,
-    RegisterComponent,
-    LogInComponent,
-    ForumComponent
-  ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule,ReactiveFormsModule,FormsModule],
     BarterRequestComponent,
     EventComponent,
     VenueComponent,
@@ -73,17 +69,32 @@ import { EditcategoryComponent } from './components/editcategory/editcategory.co
     AddannonceComponent,
     AnnonceComponent,
     EditAnnonceComponent,
-    EditcategoryComponent
-      ],
+    EditcategoryComponent,
+  ],
   imports: [
-    BrowserModule,CommonModule,
-    AppRoutingModule  ,
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    FormsModule,
+    BrowserModule,
+    CommonModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     MatDialogModule,
     MatButtonModule,
-    HttpClientModule],
-  providers: [],
+    HttpClientModule,
+    BrowserModule,
+    CommonModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ReactiveFormsModule,
+    MatDialogModule,
+    MatButtonModule,
+    HttpClientModule,
+  ],
+  providers: [AnnonceService,BarterRequestService,CategoryService,VenueService,EventService,ResponseService,FormService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -3,9 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { LayoutFrontComponent } from './front/layout-front/layout-front.component';
 import { LayoutComponent } from './back/layout/layout.component';
 import { BrowserModule } from '@angular/platform-browser';
-import { LogInComponent } from './components/log-in/log-in.component';
-import { RegisterComponent } from './components/register/register.component';
-import { ForumComponent } from './components/forum/forum.component';
 import { BarterRequestComponent } from './components/barter-request/barter-request.component';
 import { EventComponent } from './components/event/event.component';
 import { VenueComponent } from './components/venue/venue.component';
@@ -119,18 +116,11 @@ const routes: Routes = [
     ],
   },
   {
-    path: 'back/forum',
-    component: ForumComponent,
-    // Add more routes for the "front" section as needed
-  },
-  {
     path: 'front',
     component: LayoutFrontComponent,
 
   },
-  { path: 'login', component: LogInComponent },
-  { path: 'register', component: RegisterComponent }
-  
+
 ];
 
 @NgModule({
