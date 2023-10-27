@@ -1,0 +1,30 @@
+<!-- reviews-list.component.html -->
+
+<div>
+    <h2>Reviews List</h2>
+  
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Product ID</th>
+          <th>Comments</th>
+          <th>Star Rating</th>
+          <th>Status</th>
+          <th>Action</th> <!-- You can add more columns as needed -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let review of reviews">
+          <td>{{ review.id }}</td>
+          <td>{{ review.productId }}</td>
+          <td>{{ review.comments }}</td>
+          <td>{{ review.starRating }}</td>
+          <td>{{ review.status }}</td>
+          <td>
+            <!-- Add action buttons or links as needed -->
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</div>

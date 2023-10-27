@@ -29,6 +29,16 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
+        path: 'products',
+        loadChildren: () =>
+          import('./products/products.module').then((m) => m.ProductsModule),
+      },
+      {
+        path: 'reviews',
+        loadChildren: () =>
+          import('./reviews/reviews.module').then((m) => m.ReviewsModule),
+      },
+      {
         path: 'barterRequests',
         component: BarterRequestComponent,
       },
@@ -86,11 +96,11 @@ const routes: Routes = [
       },
       {
         path: 'responses',
-        component: ResponseComponent ,
+        component: ResponseComponent,
       },
       {
         path: 'addresponse',
-        component: AddResponseComponent ,
+        component: AddResponseComponent,
       },
       {
         path: 'editresponse/:id',
@@ -112,22 +122,18 @@ const routes: Routes = [
         path: 'form/:id', // View form details by ID, :id is a parameter
         component: FormComponent,
       },
-
     ],
   },
   {
     path: 'front',
     component: LayoutFrontComponent,
-
   },
-
+  
 ];
 
 @NgModule({
-  imports: [BrowserModule,RouterModule.forRoot(routes)],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  declarations: [
-    LayoutFrontComponent
-  ],
+  declarations: [LayoutFrontComponent],
 })
 export class AppRoutingModule {}

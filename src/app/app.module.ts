@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { OAuthModule } from 'angular-oauth2-oidc';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './back/header/header.component';
@@ -93,6 +93,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatDialogModule,
     MatButtonModule,
     HttpClientModule,
+    OAuthModule.forRoot()
   ],
   providers: [AnnonceService,BarterRequestService,CategoryService,VenueService,EventService,ResponseService,FormService],
   bootstrap: [AppComponent],
